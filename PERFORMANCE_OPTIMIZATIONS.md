@@ -91,10 +91,10 @@ Pandas and NumPy have optimized implementations for common operations:
 
 For a DataFrame with ~200 rows (as in this dataset):
 
-| Operation | Before | After | Speedup |
-|-----------|--------|-------|---------|
-| Rounding (Cell 27) | ~2-5 ms | ~0.1-0.2 ms | **10-25x faster** |
-| Type Conversion (Cell 30) | ~5-10 ms | ~2-3 ms | **2-3x faster** |
+Operation | Before | After | Speedup
+----------|--------|-------|----------
+Rounding (Cell 27) | ~2-5 ms | ~0.1-0.2 ms | **10-25x faster**
+Type Conversion (Cell 30) | ~5-10 ms | ~2-3 ms | **2-3x faster**
 
 *Note: Actual performance gains scale with dataset size. For datasets with 10,000+ rows, the speedup can be 100x or more.*
 

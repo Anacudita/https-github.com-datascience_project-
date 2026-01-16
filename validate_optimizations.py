@@ -34,7 +34,7 @@ def test_rounding_optimization():
     comparison = pd.DataFrame({
         'Original': result_original,
         'Optimized': result_optimized,
-        'Equal': result_original.equals(result_optimized)
+        'Match': result_original == result_optimized
     })
     
     print(comparison)
@@ -93,14 +93,18 @@ def test_type_conversion_optimization():
         return False
 
 
-def test_with_actual_data():
-    """Test with the actual dataset if available."""
+def test_with_actual_data(csv_file="access_electricity.csv"):
+    """Test with the actual dataset if available.
+    
+    Args:
+        csv_file: Path to the CSV file (default: access_electricity.csv)
+    """
     print("\n\nTesting with Actual Dataset")
     print("-" * 60)
     
     try:
         # Load the actual dataset
-        df = pd.read_csv("access_electricity.csv")
+        df = pd.read_csv(csv_file)
         print(f"Loaded dataset with {len(df)} rows")
         
         # Test rounding on actual data
